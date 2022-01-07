@@ -2,7 +2,7 @@ package com.pamela.diceroller
 
 import android.os.Bundle
 import android.widget.Button
-import android.widget.Toast
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
@@ -12,8 +12,18 @@ class MainActivity : AppCompatActivity() {
 
         val rollButton: Button = findViewById(R.id.button)
         rollButton.setOnClickListener {
-            val toast=Toast.makeText(this,"Dice Rolled!", Toast.LENGTH_SHORT)
-            toast.show()
+            //val toast=Toast.makeText(this,"Dice Rolled!", Toast.LENGTH_SHORT)
+            //toast.show()
+
+            val resultTextView: TextView = findViewById(R.id.textView)
+            resultTextView.text="6"
+
         }
+    }
+}
+
+class Dice(val numSides: Int){
+    fun roll(): Int{
+        return(1..numSides).random()
     }
 }
