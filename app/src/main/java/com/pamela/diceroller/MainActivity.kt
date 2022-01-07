@@ -18,8 +18,8 @@ class MainActivity : AppCompatActivity() {
             //toast.show()
 
 
-       //Display the text 6, on the text view.
-        //val resultTextView: TextView = findViewById(R.id.textView)
+            //Display the text 6, on the text view.
+            //val resultTextView: TextView = findViewById(R.id.textView)
             //resultTextView.text="6"
 
             rollDice()
@@ -28,15 +28,15 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun rollDice() {
-        val dice= Dice(6)
-        val diceRoll= dice.roll()
+        val dice = Dice(6)
+        val diceRoll = dice.roll()
         val resultTextView: TextView = findViewById(R.id.textView)
-        resultTextView.text=diceRoll.toString()
+        resultTextView.text = diceRoll.toString()
     }
 }
 
-class Dice(val numSides: Int){
-    fun roll(): Int{
-        return(1..numSides).random()
+class Dice(val numSides: Int) {
+    fun roll(): Int {
+        return (1..numSides).random()
     }
 }
