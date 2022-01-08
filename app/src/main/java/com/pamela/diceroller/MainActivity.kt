@@ -30,7 +30,7 @@ class MainActivity : AppCompatActivity() {
     private fun rollDice() {
         val dice = Dice(6)
         val diceRoll = dice.roll()
-        val diceImage:ImageView = findViewById(R.id.imageView)
+        val diceImage: ImageView = findViewById(R.id.imageView)
 
         //The setImageResource() method is passing the resource id for the dice_2 image.
         //diceImage.setImageResource(R.drawable.dice_2)
@@ -39,8 +39,8 @@ class MainActivity : AppCompatActivity() {
         //it's read as when diceRoll is 1 display the drawable..
         /*when (diceRoll){
             1 -> diceImage.setImageResource(R.drawable.dice_1)
-            2-> diceImage.setImageResource(R.drawable.dice_2)
-            3-> diceImage.setImageResource(R.drawable.dice_3)
+            2 -> diceImage.setImageResource(R.drawable.dice_2)
+            3 -> diceImage.setImageResource(R.drawable.dice_3)
             4 -> diceImage.setImageResource(R.drawable.dice_4)
             5 -> diceImage.setImageResource(R.drawable.dice_5)
             6 -> diceImage.setImageResource(R.drawable.dice_6)
@@ -60,6 +60,7 @@ class MainActivity : AppCompatActivity() {
 
         }
         diceImage.setImageResource(drawableResource)
+        diceImage.contentDescription = diceRoll.toString()
     }
 }
 
